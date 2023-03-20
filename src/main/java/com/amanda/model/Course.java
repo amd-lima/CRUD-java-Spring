@@ -1,5 +1,7 @@
 package com.amanda.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,6 +17,8 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("_id")
+    //@JsonIgnore -> caso queira ignorar, não enviar essa informação.
     private Long id;
 
     @Column(length = 200, nullable = false) //(name = "nome") -> caso o nome da coluna seja diferente no BD
