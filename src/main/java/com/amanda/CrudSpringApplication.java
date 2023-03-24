@@ -21,8 +21,8 @@ public class CrudSpringApplication {
 			courseRepository.deleteAll();
 
 			Course c = new Course();
-			c.setName("JS");
-			c.setCategory("front-end");
+			c.setName("Java");
+			c.setCategory("Back-end");
 
 			courseRepository.save(c);
 		};
